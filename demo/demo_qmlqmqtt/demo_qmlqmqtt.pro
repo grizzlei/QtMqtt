@@ -2,6 +2,8 @@ TEMPLATE = app
 
 QT += qml quick widgets
 
+CONFIG += debug_and_release
+
 SOURCES += main.cpp
 
 RESOURCES += qml.qrc

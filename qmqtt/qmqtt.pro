@@ -3,7 +3,10 @@ QT += network
 
 TARGET = qmqtt
 TEMPLATE = lib
-CONFIG += staticlib
+
+CONFIG(release, debug|release):DEFINES += QT_NO_DEBUG_OUTPUT
+CONFIG += staticlib \
+          debug_and_release
 
 SOURCES += \
     src/qmqtt_client.cpp \

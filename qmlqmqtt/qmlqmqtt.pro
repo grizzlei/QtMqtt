@@ -1,7 +1,10 @@
 TEMPLATE = lib
 TARGET = QmlQmqtt
 QT += qml quick
+
+CONFIG(release, debug|release):DEFINES += QT_NO_DEBUG_OUTPUT
 CONFIG += qt plugin c++11
+CONFIG += debug_and_release
 
 TARGET = $$qtLibraryTarget($$TARGET)
 uri = QmlQmqtt
